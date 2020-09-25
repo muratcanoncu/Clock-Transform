@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clock {
+    width: 600px;
+    height: 600px;
+    margin: 90px auto;
+    border: 5px solid black;
+    border-radius: 50%;
+
+    position: relative;
+}
+.point {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 49%;
+    left: 49%;
+}
+.number {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+.three{
+    position: absolute;
+    top: 47%;
+    left:565px;
+}
+.six{
+    position: absolute;
+    top: 550px;
+    left: 47%;
+}
+.nine{
+    position: absolute;
+    top: 47%;
+    left:5px;
+}
+.twelve {
+    position: absolute;
+    top: 0;
+    left: 47%;
+}
+.second {
+    height: 255px;
+    border-right: 3px solid red;
+
+    position: absolute;
+    top: 43px;
+    left: 294px;
+
+    animation-name: clock;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.minute {
+    height: 200px;
+    border-right: 5px solid yellow;
+    position: absolute;
+    top: 96px;
+    left: 293px;
+
+    animation-name: clock;
+    animation-duration: 3600s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.hour {
+    height: 180px;
+    border-right: 7px solid black;
+
+    position: absolute;
+    top: 119px;
+    left: 293px;
+
+    animation-name: clock;
+    animation-duration: 43200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes clock {
+    0% {
+     transform: rotateZ(0);
+     transform-origin: center bottom;
+    }
+    100% {
+    transform: rotateZ(360deg);
+    transform-origin: center bottom;
+    }
+}
